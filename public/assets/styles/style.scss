@@ -19,6 +19,8 @@ html{
     padding-top: 6em;
     section{
       width: 100%;
+      box-sizing: border-box;
+      padding: 0 1em;
       div.wrapper-section{
         max-width: 1500px;
         margin: 0 auto;

@@ -43,12 +43,9 @@ class TodoListController extends AbstractController
         $session = $requestStack->getSession();
         $list = $session->get(self::$session_key);
         $removedElement = $requestStack->getMainRequest()->query->get("removedItem");
+        $list = array_values($list);
         unset($list[$removedElement]);
-        $newList = [];
-        foreach ($list as $item){
-            $newList[] = $item;
-        }
-        $session->set(self::$session_key, $newList);
+        $session->set(self::$session_key, $list);
         return $this->redirectToRoute("list");
     }
 }
