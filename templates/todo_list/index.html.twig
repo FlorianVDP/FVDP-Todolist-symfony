@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cours php | Todo List{% endblock %}
+
+{% block body %}
+    <section class="todoList">
+        <div class="wrapper-section">
+            <h1>Ma liste</h1>
+            <form action="{{ url("add") }}" method="post">
+                <input type="text" name="addItem" placeholder="Ajouter un element...">
+                <button type="submit"><span class="material-icons">add_circle_outline</span>Ajouter</button>
+            </form>
+            {% if listSession %}
+                <ul>
+                    {% for element in listSession %}
+                        <li id="{{ loop.index0 }}"><a href="{{ url("remove") }}?removedItem={{ loop.index0 }}" class="material-icons">delete_outline</a><span>{{ element }}</span></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

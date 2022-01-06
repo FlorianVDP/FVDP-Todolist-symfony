@@ -1,0 +1,112 @@
+@import "vendors/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+  color: #2f3542;
+}
+html body {
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 6em;
+}
+html body section {
+  width: 100%;
+}
+html body section div.wrapper-section {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+html body section div.wrapper-section .material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+html body section.todoList div.wrapper-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+html body section.todoList div.wrapper-section h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+html body section.todoList div.wrapper-section form {
+  display: flex;
+  align-items: stretch;
+  max-width: 500px;
+  width: 100%;
+}
+html body section.todoList div.wrapper-section form input {
+  padding: 1em;
+}
+html body section.todoList div.wrapper-section form input[type=text] {
+  flex-grow: 1;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid rgba(47, 53, 66, 0.25);
+}
+html body section.todoList div.wrapper-section form button {
+  padding: 1em;
+  cursor: pointer;
+  background-color: dodgerblue;
+  border: 1px solid dodgerblue;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-weight: bold;
+}
+html body section.todoList div.wrapper-section form button:hover, html body section.todoList div.wrapper-section form button:focus {
+  background-color: #0077ea;
+  border: 1px solid #0077ea;
+}
+html body section.todoList div.wrapper-section ul {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+html body section.todoList div.wrapper-section ul li {
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 1px solid rgba(47, 53, 66, 0.05);
+}
+html body section.todoList div.wrapper-section ul li:last-of-type {
+  border-color: rgba(47, 53, 66, 0);
+}
+html body section.todoList div.wrapper-section ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #ff4757;
+  text-decoration: none;
+  transition: all ease-in 150ms;
+}
+html body section.todoList div.wrapper-section ul li a:hover, html body section.todoList div.wrapper-section ul li a:focus {
+  color: #ff1428;
+}
+
+/*# sourceMappingURL=style.css.map */

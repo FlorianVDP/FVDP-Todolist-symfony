@@ -1,0 +1,126 @@
+@import "vendors/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+$blanc: #ffffff;
+$noir: #2f3542;
+$gris: #f1f2f6;
+$mainColor: #1e90ff;
+$rouge: #ff4757;
+$defaultFont : 'Roboto', sans-serif;
+$displayFont: 'Oswald', sans-serif;
+$googleIcons: 'Material Icons';
+html{
+  font-family: $defaultFont;
+  color: $noir;
+  body{
+    background-color: $gris;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 6em;
+    section{
+      width: 100%;
+      div.wrapper-section{
+        max-width: 1500px;
+        margin: 0 auto;
+        .material-icons{
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Safari and Chrome. */
+          text-rendering: optimizeLegibility;
+
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+
+          /* Support for IE. */
+          font-feature-settings: 'liga';
+        }
+      }
+      &.todoList{
+        div.wrapper-section{
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          h1{
+            font-family: $displayFont;
+            font-size: 2em;
+            margin-bottom: .5em;
+          }
+          form{
+            display: flex;
+            align-items: stretch;
+            //gap: 2em;
+            max-width: 500px;
+            width: 100%;
+            input{
+              padding: 1em;
+              &[type="text"]{
+                flex-grow: 1;
+                border-radius: 4px 0 0 4px;
+                border: 1px solid rgba($noir, .25);
+              }
+            }
+            button{
+              padding: 1em;
+              cursor: pointer;
+              background-color: rgba($mainColor, 1);
+              border: 1px solid rgba($mainColor, 1);
+              border-radius: 0 4px 4px 0;
+              color: $blanc;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              gap: 1em;
+              font-weight: bold;
+              &:hover, &:focus{
+                background-color: darken($mainColor, 10);
+                border: 1px solid darken($mainColor, 10);
+              }
+            }
+          }
+          ul{
+            background-color: $blanc;
+            border-radius: 4px;
+            li{
+              padding: 1em 2em;
+              display: flex;
+              align-items: center;
+              gap: 1em;
+              border-bottom: 1px solid rgba($noir, .05);
+              &:last-of-type{
+                border-color: rgba($noir, 0);
+              }
+              a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                color: $rouge;
+                text-decoration: none;
+                transition: all ease-in 150ms;
+                &:hover, &:focus{
+                  color: darken($rouge, 10);
+                }
+              }
+              span{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
